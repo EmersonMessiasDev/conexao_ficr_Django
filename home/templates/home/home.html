@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{%block 'titulo'%}Conexão Ficer{% endblock %}
+
+{%block 'conteudo'%}
+
+    <!-- NAV BAR -->
+    <nav class="nav-bar  w-full flex justfy-around items-center py-1 px-4 fixed z-50" >
+        <div class="div-logo">
+            <div class="logo"> 
+                <a href="#"><img class="img-logo-nav" src="/static/image/LOGOMARCA.png" alt=""></a>
+                <a href="#">Conexão Ficr</a>
+            </div>
+            <div class="img-login">
+                <a href="#" title="login icons"><img src="/static/image/user.png" alt=""></a>
+            </div>
+        </div>
+        <div class="container-icon">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#sec-1">Direcionamento</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sec-2">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sec-3">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAV BAR-FIM -->
+    <header
+        class="min-h-screen bg-black bg-opacity-50 bg-blend-overlay showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat">
+        <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
+            <img src="/static/image/Logo.png" class="imagem-principal" alt="">
+            <h1 class="font-semibold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
+                Esta perdido nos estudos, ou não sabe por onde estudar?
+            </h1>
+            <h2 class="text-xl md:text-xl py-6">
+                Seu direcionamento pode está aqui.
+            </h2>
+            <h3 class="text-sm md:text-lg pb-3">
+                Quer começar? Coloque seu e-mail abaixo para acessar.
+            </h3>
+            <form class="d-flex flex-col md:flex-row align-items-center gap-3">
+                <input class="form-control me-2 input-header" type="email" placeholder="Digite seu email"
+                    aria-label="Search">
+                <button class="btn btn-header">Acessar</button>
+            </form>
+        </div>
+    </header>
+    <div>
+        <!--! SEÇÃO 01 -->
+        <section id="sec-1" class='card flex flex-col md:flex-row items-center border-gray-900 section 1'>
+            <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10 ">
+                <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                    Direcionamento.
+                </h2>
+                <h5 class="md:text-xl text-lg">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde consequatur veniam sequi, excepturi debitis qui consectetur aut fuga nemo corrupti, iure ratione enim porro eaque perspiciatis repellat libero molestiae voluptas.
+                </h5>
+            </div>
+            <div class='md:w-1/2 flex justify-center items-center'>
+                <img src="/static/image/imagem1.svg" class="w-8/12 svg-secao-1" alt="">
+            </div>
+        </section>
+        <!--! SEÇÃO 02 -->
+        <section id="sec-2" class=' card flex flex-col md:flex-row items-center border-gray-900 section 2'>
+            <div class='md:w-1/2 flex justify-center items-center '>
+                <img src="/static/image/online-world-animate.svg" class="w-8/12 svg-secao-2" alt="">
+            </div>
+            <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+                <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                    Cursos e informações em primeira mão.
+                </h2>
+                <h5 class="md:text-xl text-lg">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iure quasi saepe et. Sint ea fuga necessitatibus accusantium, tempore veritatis! Quasi quam quisquam delectus in autem ipsum praesentium impedit eveniet?
+                </h5>
+            </div>
+        </section>
+        <!--! SEÇÃO 03 -->
+        <section id="sec-3" class='card flex flex-col md:flex-row items-center border-gray-900 border-b-2 section 3'>
+            <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+                <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                    Blog e troca de conhecimento.
+                </h2>
+                <h5 class="md:text-xl text-lg">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, incidunt! Rem voluptatum laborum error harum? Voluptatum excepturi architecto possimus exercitationem dicta, ipsam similique officia maxime voluptatem, expedita recusandae. Molestiae, neque!
+                </h5>
+            </div>
+            <div class='md:w-1/2 flex justify-center items-center'>
+                <img src="/static/image/online-world-animate(1).svg" class="w-8/12 svg-secao-3" alt="">
+            </div>
+        </section>
+    </div>
+    <!--! FOOTER -->
+    <footer class="p-4 bg-black rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800 footer">
+        <div class="sm:flex sm:items-center sm:justify-between footer-container">
+            <a href="#" class="flex items-center mb-4 sm:mb-0 logo-footer">
+                <img src="/static/image/Logo.png" class="mr-3 h-8" alt="Flowbite Logo">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap" style="color: white;">Conexão Ficr</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm  sm:mb-0 footer-menu " style="color: white;">
+                <li>
+                    <a href="#" class="mr-4  md:mr-6 footer-menu-item">Sobre</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 md:mr-6 footer-menu-item">Desenvolvedores</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 md:mr-6 footer-menu-item">Documentação</a>
+                </li>
+                <li>
+                    <a href="#" class=" footer-menu-item">Contato</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" style="color: white;">
+    
+        <span class="block text-sm  sm:text-center white:text-gray-400" style="color: white;">© 2022 <a href="#"
+                class="">Conexão Ficr™</a>. Todos os Direitos Reservado.
+        </span>
+    </footer>
+
+
+
+
+{% endblock %}
