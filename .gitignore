@@ -1,0 +1,132 @@
+# Django#
+* .log
+* .pot
+* .pyc
+__pycache__
+db.sqlite3
+meios de comunicação
+
+# Arquivos de backup #
+* .bak
+
+# Se você estiver usando o PyCharm #
+.idea / ** / workspace.xml
+.idea / ** / tasks.xml
+.idea / dicionários
+.idea / ** / dataSources /
+.idea / ** / dataSources.ids
+.idea / ** / dataSources.xml
+.idea / ** / dataSources.local.xml
+.idea / ** / sqlDataSources.xml
+.idea / ** / dynamic.xml
+.idea / ** / uiDesigner.xml
+.idea / ** /gradle.xml _
+.idea / ** / bibliotecas
+* .iws / out /
+
+# Píton#
+* .py [ cod ]
+* $py.class
+
+# Distribuição/embalagem
+.Compilação  Python /
+desenvolver-ovos /
+dist . /
+downloads /
+ovos /
+.ovos /
+lib /
+lib64 /
+peças /
+sdist /
+var /
+rodas /
+* .egg-info /
+.instalado.cfg
+* .egg
+* .manifesto
+* .spec
+
+# Logs do instalador
+# pip-log.txt
+# pip-delete-this-directory.txt
+
+# Teste de unidade / relatórios de cobertura
+htmlcov /
+.tox /
+.cobertura
+.cobertura. *
+.cache
+.pytest_cache /
+nariztests.xml
+cobertura.xml
+* .cover
+.hipótese /
+
+# Notebook Jupyter
+.ipynb_checkpoints
+
+#pyenv _
+.python-version
+
+# aipo
+aipo-schedule. *
+
+# Arquivos analisados ​​pelo SageMath
+* .sage.py
+
+# Ambientes
+.env
+.venv
+ambiente /
+venv /
+ENV /
+env.bak /
+venv.bak /
+
+# documentação do mkdocs
+/ local
+
+#mypy _
+.mypy_cache /
+
+# Texto sublime #
+* .tmlanguage.cache
+* .tmPreferences.cache
+* .stTheme.cache
+* .sublime-workspace
+* .sublime-project
+
+# arquivo de configuração sftp
+sftp-config.json
+
+# Pacote de arquivos específicos de controle de pacote
+Control.última execução
+Control.ca-list
+Control.ca-pacote
+Control.system-ca-bundle
+GitHub.sublime-settings
+
+# Código do Visual Studio #
+.vscode / *
+! .vscode / configurações.json
+! .vscode / tasks.json
+! .vscode / lançamento.json
+! .vscode / extensões.json
+.história
+
+# Adições pessoais
+__pycache__ /
+* .pyc
+__localcode
+venv
+env
+.DS_Store
+local_settings.py
+_local_settings.py
+log de erros do gunicorn
+db.sqlite3
+cópia de banco de dados.sqlite3
+estático /
+
+/resumo.txt
