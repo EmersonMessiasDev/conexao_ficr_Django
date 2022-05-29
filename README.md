@@ -14,9 +14,12 @@ Conexão para conectar pessoas e o ficr a abreviação da faculdade que estudo, 
 
 
 ## 🎨 Layout
+### 🎨 Home-page
 
-![Home-Page]()
-![Home-Page]()
+![Home-Page](https://github.com/EmersonMessiasDev/conexao_ficr_Django/blob/main/Readme-Layouts/pagina_ficr.png)
+
+### 🎨 Pagina login/cadastro
+![Home-Page](https://github.com/EmersonMessiasDev/conexao_ficr_Django/blob/main/Readme-Layouts/Login_cadastro.jpg)
 
 ## 🛠 Tecnologias
 
