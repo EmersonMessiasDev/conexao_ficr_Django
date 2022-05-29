@@ -1,7 +1,7 @@
 # Landing Page Responsiva - Conexão Ficr 
 
 ## 💻 Sobre o Projeto>
-Pagina web onde estou tentando solucionar um problema pessoal passado, quando entrei na faculdade tive dificuldade de encontrar fontes de confiaça pra estudar sem me perder pelo caminho, no coneão ficr estudantes recem ingressados ou interessados na area de tecnologia vai ter acesso a um portal onde encontrara materiais e curso de qualidade onde poderam estudar e buscar informações sobre o assunto que deseja pois sera dividido por area.
+Pagina web onde estou tentando solucionar um problema pessoal passado, quando entrei na faculdade tive dificuldade de encontrar fontes de confiaça pra estudar sem me perder pelo caminho, no coneão ficr estudantes recem ingressados ou interessados na area de tecnologia vão ter acesso a um portal onde encontrão materiais e cursos de qualidade onde poderão estudar e buscar informações sobre o assunto que desejam pois serão dividido por área.
 
 ### De onde vem as indicações de cursos e materias?
 Criei um formulario e espalhei no Linkdin e nos grupos de tecnologia que faço parte para colher essas informações onde irei rankear por categorias de 'gratuitos, pagos, canais do youtube, portais de estudo e sites de documentaçoes e etc...'
@@ -34,7 +34,7 @@ As seguintes ferramentas foram usadas na construção do projeto até o momento:
 
 
 
-## 💡 Como executar o projeto
+## 💡 Como acessar o projeto
 
 Esse projeto foi elaborado para vizualizar/interagir em desktop e mobile. Para acessar basta clicar no link que deixarei abaixo assim que fizer o deploy:
 
