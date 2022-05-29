@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url(config_geral.css);
+
+body * {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+header {
+    background-image: url("/static/image/Principal.jpg");
+    background-size: cover;
+    background-position: center center;
+
+}
+
+/** ----------NAV BAR---------- */
+.nav-bar {
+    background-color: #000e0e41;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+
+}
+
+.div-logo {
+    display: flex;
+}
+
+.nav-list .nav-item {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+.nav-bar a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    color: #00B2ff;
+    ;
+}
+
+.img-logo-nav {
+    height: 40px;
+}
+
+.img-login {
+    width: 40px;
+    display: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo h1 {
+    font-size: 25px;
+}
+
+/** ------------------------------------------------------------------------------------------ */
+.imagem-principal {
+    width: 35%;
+    padding: 30px;
+}
+
+.logo-nav {
+    width: 20%;
+}
+
+
+/* Botão acessar */
+.btn {
+    background-color: #00B2ff;
+    color: #ffffff;
+    width: 45%;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: #00B2ff;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.btn-login {
+    background-color: #00B2ff;
+    width: 40px;
+    height: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    border-radius: 100px;
+    outline: none;
+
+}
+
+.btn,
+.btn-blue {
+    border-color: rgb(37 99 235);
+    color: #fff;
+    box-shadow: 0 0 40px 40px rgb(37 99 235) inset, 0 0 0 0 rgb(37 99 235);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px 0 rgb(37 99 235) inset, 0 0 10px 4px rgb(37 99 235);
+    ;
+}
+
+.btn-blue:hover {
+    box-shadow: 0 0 10px 0 rgb(19, 118, 248) inset, 0 0 10px 4px rgb(37 99 235);
+    ;
+}
+
+
+/*? ---------------SEÇÃO--------------- */
+.card {
+    background-color: #001431ee;
+    color: #ffffff;
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.svg-secao-1 {
+    width: 80%;
+    padding: 30PX;
+}
+
+.svg-secao-2 .svg-secao-3 {
+    width: 100%;
+    padding: 30px;
+}
+
+/*? ---------------RESPONSIVIDADE--------------- */
+
+@media only screen and (max-width: 600px) {
+    .logo-nav {
+        width: 50%;
+    }
+}
+
+
+.input-nav,
+input-header {
+    border-radius: 8px;
+    display: none;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.btn {
+    width: auto;
+}
+
+
+@media all and (max-width: 480px) {
+    .container-icon {
+        display: none;
+    }
+
+    .img-login {
+        display: block;
+
+    }
+
+    .div-logo {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    .imagem-principal {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .footer {
+        align-items: center;
+
+    }
+
+    .logo-footer {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        color: white;
+    }
+}
