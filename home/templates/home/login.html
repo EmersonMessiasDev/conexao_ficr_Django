@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="/static/css/login.css">
     <title>Document</title>
 </head>
+
+
+
 <body>
-        <div class="main">
+
+    <div class="main">
             <input type="checkbox" id="chk" aria-hidden="true">
             <div class="signup">
                 <form action="">
@@ -18,8 +22,8 @@
                     <input type="email" name="email" placeholder="E-mail" required="">
                     <input type="password" name="pswd" placeholder="Senha" required="">
                     <button>Cadastrar</button>
+                        <a href=""><img src="/static/image/sair.png" alt=""></a>
                 </form>
-                <button>Cancelar</button>
             </div>
 
             <div class="login">
@@ -28,8 +32,8 @@
                     <input type="email" name="email" placeholder="E-mail" required="">
                     <input type="password" name="pswd" placeholder="Senha" required="">
                     <button>Login</button>
+                        <a href=""><img src="/static/image/sair.png" alt=""></a>
                 </form>
-                <a class="cancelar-login" href="{% url 'home' %}">Cancelar</a>
             </div>
         </div>
     </div>

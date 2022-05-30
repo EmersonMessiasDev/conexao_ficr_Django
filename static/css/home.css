@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-@import url(config_geral.css);
 
 body * {
     margin: 0;
@@ -168,6 +167,8 @@ input-header {
 
 .btn {
     width: auto;
+    align-items: center;
+    margin-right: 11px;
 }
 
 
@@ -188,8 +189,12 @@ input-header {
     }
 
     .imagem-principal {
-        width: 80%;
+        width: 90%;
         padding: 30px;
+    }
+
+    .h1-principal {
+        font-size: 15px;
     }
 
     .footer {

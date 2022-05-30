@@ -37,7 +37,9 @@ body{
 }
 #chk{
     display: none;
+
 }
+
 .signup{
     position: relative;
     width: 100%;
@@ -68,6 +70,12 @@ input{
     border-radius: 5px;
 }
 
+a img {
+    margin-left: 45%;
+    margin-top: 20px;
+    display: block;
+}
+
 button{
     width: 60%;
     height: 40px;
@@ -88,6 +96,11 @@ button{
 
 button:hover{
     box-shadow: 0 0 5px 0 rgb(37 99 235) inset, 0 0 5px 2px rgb(37 99 235);;
+}
+
+a img:hover{
+    box-shadow: 0 0 5px 0 rgb(37 99 235) inset, 0 0 5px 2px rgb(37 99 235);;
+    border-radius: 25px;
 }
 
 .login{
