@@ -12,7 +12,7 @@
                 <a href="#">Conexão Ficr</a>
             </div>
             <div class="img-login">
-                <a href="#" title="login icons"><img src="/static/image/user.png" alt=""></a>
+                <a href="{% url 'login'%}" title="login icons"><img src="/static/image/user.png" alt=""></a>
             </div>
         </div>
         <div class="container-icon">
@@ -46,7 +46,7 @@
             <form class="d-flex flex-col md:flex-row align-items-center gap-3">
                 <input class="form-control me-2 input-header" type="email" placeholder="Digite seu email"
                     aria-label="Search">
-                <button class="btn btn-header">Acessar</button>
+                    <button class="btn btn-header"><a href="{% url 'login' %}">Acessar</a></button>
             </form>
         </div>
     </header>
@@ -94,36 +94,5 @@
             </div>
         </section>
     </div>
-    <!--! FOOTER -->
-    <footer class="p-4 bg-black rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800 footer">
-        <div class="sm:flex sm:items-center sm:justify-between footer-container">
-            <a href="#" class="flex items-center mb-4 sm:mb-0 logo-footer">
-                <img src="/static/image/Logo.png" class="mr-3 h-8" alt="Flowbite Logo">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap" style="color: white;">Conexão Ficr</span>
-            </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm  sm:mb-0 footer-menu " style="color: white;">
-                <li>
-                    <a href="#" class="mr-4  md:mr-6 footer-menu-item">Sobre</a>
-                </li>
-                <li>
-                    <a href="#" class="mr-4 md:mr-6 footer-menu-item">Desenvolvedores</a>
-                </li>
-                <li>
-                    <a href="#" class="mr-4 md:mr-6 footer-menu-item">Documentação</a>
-                </li>
-                <li>
-                    <a href="#" class=" footer-menu-item">Contato</a>
-                </li>
-            </ul>
-        </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" style="color: white;">
-    
-        <span class="block text-sm  sm:text-center white:text-gray-400" style="color: white;">© 2022 <a href="#"
-                class="">Conexão Ficr™</a>. Todos os Direitos Reservado.
-        </span>
-    </footer>
-
-
-
 
 {% endblock %}

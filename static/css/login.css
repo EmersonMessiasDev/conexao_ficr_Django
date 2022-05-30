@@ -106,6 +106,10 @@ button:hover{
 .login input {
     border: 1px solid rgba(0, 0, 0, 0.425);
 }
+.login button{
+    text-decoration: none;
+}
+
 
 #chk:checked ~ .login{
     transform: translateY(-420px);
@@ -125,3 +129,6 @@ button:hover{
         
     }
 }
+
+
+
