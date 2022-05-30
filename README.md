@@ -1,15 +1,15 @@
 # Landing Page Responsiva - Conexão Ficr 
 
 ## 💻 Sobre o Projeto>
-Pagina web onde estou tentando solucionar um problema pessoal passado, quando entrei na faculdade tive dificuldade de encontrar fontes de confiaça pra estudar sem me perder pelo caminho, no coneão ficr estudantes recem ingressados ou interessados na area de tecnologia vão ter acesso a um portal onde encontrão materiais e cursos de qualidade onde poderão estudar e buscar informações sobre o assunto que desejam pois serão dividido por área.
+Página web criada com o intuito de solucionar um problema pessoal passado. Ao entrar na faculdade encontrei dificuldade de achar fontes de confiaça pra estudar sem me perder. No coneãxo FIRC, estudantes recém ingressados ou interessados na área de tecnologia vão ter acesso a um portal onde encontrão materiais e cursos de qualidade divididos por áreas, podendo estudar e buscar informações sobre o assunto.
 
 ### De onde vem as indicações de cursos e materias?
-Criei um formulario e espalhei no Linkdin e nos grupos de tecnologia que faço parte para colher essas informações onde irei rankear por categorias de 'gratuitos, pagos, canais do youtube, portais de estudo e sites de documentaçoes e etc...'
+Foi criado um formulário disponibilizado no Linkedin e nos grupos de tecnologia que participo, afim de colher informações. Depois, as informações serão categorizadas (gratuitos, pagos, canais do youtube, portais de estudos, sites de documentações ...)
 
-Vai ser um trabalho um pouco puxado mas minha ideia é deixar o projeto aberto para colaboradores e assim mais pessoas conseguirem contribuir e colocar seus conhecimentos em pratica ajudando a desenvolver novas funcionalidades.
+Será um trabalho conplexo, porém o objetivo é deixar o projeto aberto para colaboradores e assim, mais pessoas conseguirão contribuir e colocar seus conhecimentos em prática, ajudando a desenvolver novas funcionalidades.
 
-## 💻 por que Conexão Ficr?
-Conexão para conectar pessoas e o ficr a abreviação da faculdade que estudo, o intuito desse projeto é colocar todos os ensinamento de front e back que venho estudando.
+## 💻 Por que "Conexão Ficr"?
+Conexão para conectar pessoas e FIRC a abreviação da faculdade que curso. O intuito desse projeto é colocar todos os ensinamento de front-end e back-end que estou estudando.
 
 
 
@@ -23,7 +23,7 @@ Conexão para conectar pessoas e o ficr a abreviação da faculdade que estudo, 
 
 ## 🛠 Tecnologias
 
-As seguintes ferramentas foram usadas na construção do projeto até o momento:
+As seguintes ferramentas foram usadas na construção do projeto:
 
 <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="HTML5"/></code>
 <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="CSS"/></code>
