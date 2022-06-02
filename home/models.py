@@ -17,9 +17,9 @@ LISTA_CATEGORIAS =(
 class Curso(models.Model):
     titulo = models.CharField(max_length=100)
     thumb = models.ImageField(upload_to='thumb_cursos')
-    descicao = models.TextField(max_length=10000)
+    descricao = models.TextField(max_length=10000)
     categoria = models.CharField(max_length=25, choices=LISTA_CATEGORIAS)
-    vizualizacao = models.IntegerField(default=0)
+    visualizacao = models.IntegerField(default=0)
     data_criacao = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
