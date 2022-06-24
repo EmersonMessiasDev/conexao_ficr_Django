@@ -114,6 +114,7 @@ GitHub.sublime-settings
 ! .vscode / lançamento.json
 ! .vscode / extensões.json
 .história
+.vscode
 
 # Adições pessoais
 __pycache__ /
