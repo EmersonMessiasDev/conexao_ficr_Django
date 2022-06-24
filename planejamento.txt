@@ -1,0 +1,19 @@
+Fazer login e criar conta
+    - Email
+    - Username
+    - Senha
+    - Cursos já vistos
+    - Editar Perfil
+
+Cursos/Videos
+    - Thumb - imagem de capa
+    - Titulo
+    - Descrição
+    - Categoria
+    - Quantidade de views
+    - Data de criação
+    - Episodios
+        - videos (link do video)
+        - titulo
+
+Barra de pesquisa
