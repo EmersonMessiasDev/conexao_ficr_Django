@@ -3,12 +3,13 @@
 {%block 'titulo'%}Home Cursos{% endblock %}
 
 {%block 'conteudo'%}
+{% include 'navbarHome.html'  %}
 
-<div>
+<div class ="py-12">
     <h1>Essa é a nossa homeCursos</h1>
     {% for curso in object_list %}
     <hr>
-        <p>{{ curso }}</p>
+        <a href="{% url 'home:detalhescursos' curso.pk %}"><p>{{ curso.titulo }}</p></a>
         <p>{{ curso.descricao }}</p>
         <img src="{{ curso.thumb.url }}" alt="">
     {% endfor %}
