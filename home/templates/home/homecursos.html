@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block 'titulo'%}Home Cursos{% endblock %}
+
+{%block 'conteudo'%}
+
+<div>
+    <h1>Essa é a nossa homeCursos</h1>
+    {% for curso in object_list %}
+    <hr>
+        <p>{{ curso }}</p>
+        <p>{{ curso.descricao }}</p>
+        <img src="{{ curso.thumb.url }}" alt="">
+    {% endfor %}
+</div>
+
+
+{% endblock %}
