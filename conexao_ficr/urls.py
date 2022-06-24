@@ -15,6 +15,7 @@ Including another URLconf
 """
 #! url > view > template
 
+from argparse import Namespace
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -22,7 +23,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("home.urls")),
+    path('', include("home.urls",namespace='home')),
 ]
 
 #? Arquivos estaticos

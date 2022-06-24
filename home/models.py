@@ -24,3 +24,12 @@ class Curso(models.Model):
     
     def __str__(self):
         return self.titulo
+    
+# criar episodios
+class Episodio(models.Model):
+    curso = models.ForeignKey("Curso", related_name="episodios", on_delete=models.CASCADE)
+    titulo = models.CharField(max_length=100)
+    video = models.URLField()
+
+    def __str__(self):
+        return self.curso.titulo + " " + self.titulo
