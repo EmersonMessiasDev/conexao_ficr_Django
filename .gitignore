@@ -5,6 +5,7 @@
 __pycache__
 db.sqlite3
 meios de comunicação
+models.py
 
 # Arquivos de backup #
 * .bak
