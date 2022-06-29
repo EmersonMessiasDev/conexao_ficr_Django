@@ -129,7 +129,7 @@
 <div class="flex flex-col px-6 pb-8 border-b border-gray-300 mx-auto lg:hidden bg-contain md:bg-cover">
     <h3 class="text-center md:text-left text-xl font-bold mb-4">COMEÇE AQUI.</h3>
     <ul class="flex flex-wrap md:flex-no-wrap px-2 text-xs font-bold">
-        {% for curso in comece_aqui %}
+        {% for curso in request.user.cursos_vistos.all %}
         <li class="text-center mx-3 mb-4 md:mb-0">
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
@@ -191,7 +191,7 @@
             <div class="wrapper ">
             <section id="section1" class="flex md:flex-nowrap items-center justify-center space-x-8">
                 <a href="#section2" class="arrow__btn text-6xl page">‹</a>
-                {% for curso in comece_aqui %}
+                {% for curso in object_list %}
                 {% if forloop.counter < 5 %}
                 <div class="item h-64 w-1/4 m-4">
                     <a href="{% url 'home:detalhescursos' curso.pk %}">
