@@ -14,8 +14,6 @@ import os
 from pathlib import Path
 
 #
-import django_heroku
-django_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -50,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -154,3 +153,13 @@ CRISPY_TEMPLATE_PACK ='bootstrap5'
 
 
 CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1','https://b204-2804-214-81e9-b8f3-46ce-41a9-dd3a-686c.ngrok.io']
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
