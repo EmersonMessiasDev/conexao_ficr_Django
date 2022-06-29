@@ -18,3 +18,6 @@ def front_end(request):
     lista_cursos = Curso.objects.filter(categoria ='FRONT-END')[0:8]
     return {"front_end": lista_cursos}
 
+def comece_aqui(request):
+    lista_cursos = Curso.objects.filter(categoria = 'COMECE_AQUI')[0:10]
+    return {'comece_aqui':lista_cursos}
