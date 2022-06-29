@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 import os
-import django_on_heroku
 from pathlib import Path
+import django_heroku
+django_heroku.settings(locals())
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -150,5 +152,4 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK ='bootstrap5'
 
-django_on_heroku.settings(locals())
 # CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1','https://b204-2804-214-81e9-b8f3-46ce-41a9-dd3a-686c.ngrok.io']
