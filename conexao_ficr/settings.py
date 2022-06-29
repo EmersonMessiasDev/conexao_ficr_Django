@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
-import django_heroku
-django_heroku.settings(locals())
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-400g4u7%#syoivnbtcdnm(-nv7a#om@%ytptwryl_-&ah$urt@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #testando ngrok
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok.io', 'conexaoficr.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok.io']
 
 
 # Application definition
@@ -49,7 +46,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -128,7 +124,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATIC_ROOT = BASE_DIR / "staticfiles"
+
 STATIC_URL = 'static/'
 
 #? 1º codigo
@@ -152,4 +148,5 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK ='bootstrap5'
 
-# CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1','https://b204-2804-214-81e9-b8f3-46ce-41a9-dd3a-686c.ngrok.io']
+
+CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1','https://b204-2804-214-81e9-b8f3-46ce-41a9-dd3a-686c.ngrok.io']
