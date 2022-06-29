@@ -104,8 +104,8 @@
 
 <body class='bg-black text-gray-100 font-primary body'>
 
-<main class='main_home_curso mx-auto mt-16 ' >
-    <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex items-end bg-contain md:bg-cover homecursos" style="background-image: url('{{ curso_destaque.thumb.url}}');">
+<main class='main_home_curso mx-auto mt-4 mb-10' >
+    <section class="h-screen relative bg-no-repeat pb-6 pl-6 flex items-end bg-contain md:bg-cover homecursos" style="background-image: url('{{ curso_destaque.thumb.url}}');">
         <div class="mb-16 md:mb-2">
             <h3 class="text-6xl font-semibold hc_titulo text-white ms:my-2 md:my-10">
                 {{ curso_destaque.titulo }}
@@ -134,6 +134,8 @@
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
             </a>
+            <h3>{{ curso.titulo }}</h3>
+            <p>Visualização: {{ curso.visualizacao }}</p>
         </li>
         {% endfor %}
     </ul>
@@ -147,6 +149,8 @@
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
             </a>
+            <h3>{{ curso.titulo }}</h3>
+            <p>Visualização: {{ curso.visualizacao }}</p>
         </li>
         {% endfor %}
     </ul>
@@ -160,7 +164,10 @@
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
             </a>
+            <h3>{{ curso.titulo }}</h3>
+            <p>Visualização: {{ curso.visualizacao }}</p>
         </li>
+        
         {% endfor %}
     </ul>
 </div>
@@ -173,6 +180,8 @@
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
             </a>
+            <h3>{{ curso.titulo }}</h3>
+            <p>Visualização: {{ curso.visualizacao }}</p>
         </li>
         {% endfor %}
     </ul>
