@@ -1,0 +1,32 @@
+{% extends 'base_projeto.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{%block 'titulo'%}Editar Perfil{% endblock %}
+
+{%block 'conteudo'%}
+{% include 'navBar.html'  %}
+
+<header class="min-h-screen  bg-cover bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat"  style="background-image: url('{% static 'image/Paginaprincipal.jpg' %}');">
+    <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
+        <h1 class="text-2xl">Olá {{ user.username }}</h1>
+
+        <form method="post" class="mb-8 w-10/12 md:w-12/12">
+            {% csrf_token %}
+            <fieldset class="form-group mx-auto bg-cover">
+                <legend class="border-bottom mb-4">Edite os campos abaixo para editar seu perfil</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <button class="bg-blue-600 py-1 px-3 text-white md:text-lg rounded-md" type="submit">Editar Perfil</button>
+        </form>
+        <small><a href="{% url 'home:mudarsenha' %}">Quer mudar sua senha?</a></small>
+    </div>
+</header>
+
+<!--! FOOTER -->
+<footer class="p-4 bg-black rounded-lg  shadow md:px-6 md:py-8 dark:bg-gray-800 footer">
+    <span class="block text-sm text-center sm:text-center white:text-gray-400" style="color: white;">© 2022 <a href="#"
+            class="">Conexão Ficr™ </a>.Versão 2022.1 Beta.
+    </span>
+</footer>
+
+{% endblock %}

@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
 
-{%block 'titulo'%}Conexão Ficer{% endblock %}
+{%block 'titulo'%}Conexão Ficr{% endblock %}
 
 {%block 'conteudo'%}
 
-    {% include 'navbarHome.html'  %}
+{% include 'navBar.html'  %}
     <header
-        class="min-h-screen bg-black bg-opacity-50 bg-blend-overlay showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat">
+    class="min-h-screen  bg-cover bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat"  style="background-image: url('{% static 'image/Paginaprincipal.jpg' %}');">
+    
         <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
             <img src="/static/image/Logo.png" class="imagem-principal" alt="">
             <h1 class="font-semibold text-3xl md:text-4xl w-10/12 md:w-3/4 text-center h1-principal">
@@ -18,10 +21,10 @@
             <h3 class="text-sm md:text-lg pb-3">
                 Quer começar? Coloque seu e-mail abaixo para acessar.
             </h3>
-            <form class="d-flex flex-col md:flex-row align-items-center gap-3">
-                <input class="form-control me-2 input-header" type="email" placeholder="Digite seu email"
-                    aria-label="Search">
-                    <button class="btn btn-header"><a href="">Acessar</a></button>
+            <form method="post" class="d-flex flex-col md:flex-row align-items-center gap-3">
+                {% csrf_token %} 
+                <input id="acessar" name="email"class="form-control me-2 input-header w-12/12 md:w-12/12" type="email" placeholder="Digite seu email">
+                    <button class="bg-blue-600 hover:bg-blue-900 py-1 px-2 text-white w-8/12 md:text-lg rounded-md" type="submit">Acessar</button>
             </form>
         </div>
     </header>
@@ -33,7 +36,7 @@
                     Direcionamento.
                 </h2>
                 <h5 class="md:text-xl text-lg">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde consequatur veniam sequi, excepturi debitis qui consectetur aut fuga nemo corrupti, iure ratione enim porro eaque perspiciatis repellat libero molestiae voluptas.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quo iure officia nobis rem magnam molestias deserunt ut, sapiente nisi voluptas! Suscipit reprehenderit officiis iste quibusdam eveniet recusandae quod incidunt.
                 </h5>
             </div>
             <div class='md:w-1/2 flex justify-center items-center'>
@@ -69,6 +72,4 @@
             </div>
         </section>
     </div>
-
-
 {% endblock %}

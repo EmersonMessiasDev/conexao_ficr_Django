@@ -1,6 +1,7 @@
 from django.utils import timezone
 from distutils.command.upload import upload
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 #? criando categoria cursos
 #? armazenar no banco - mostrar ao usuario 
@@ -11,6 +12,8 @@ LISTA_CATEGORIAS =(
     ("BANCO_DE_DADOS","BANCO DE DADOS"),
     ("OUTROS", "OUTROS"),
     ("INGLES", "INGLÊS"),
+    ("DESTAQUE", "DESTAQUE"),
+    ("COMECE_AQUI","COMEÇE_AQUI")
 ) 
 
 #criar cursos
@@ -33,3 +36,9 @@ class Episodio(models.Model):
 
     def __str__(self):
         return self.curso.titulo + " " + self.titulo
+
+
+#usuario
+class Usuario(AbstractUser):
+    cursos_vistos = models.ManyToManyField("Curso")
+    

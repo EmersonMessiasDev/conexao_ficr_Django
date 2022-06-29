@@ -1,4 +1,5 @@
 {% extends 'base_projeto.html' %}
+{% load static %}
 
 
 {%block 'titulo' %}Home Cursos{% endblock %}
@@ -76,31 +77,47 @@
         
             }
         }
+        @media only screen and (max-width: 480px){
+            .homecursos {  width: 100%;  height: 300px;  object-fit: cover;  object-position: bottom;}
+            .main_home_curso { width: 100vw;
+                height: 100vh;
+                }
+            .hc_titulo{ font-size: 24px;}
+            .hc_sb_titulo{font-size: 16px;}
+
+            .carrosel {
+                display: none;
+            }
+            .body{
+                height: 100%;
+            }
+        }
+        
 </style>
 {% endblock %}
 
 
 
 {%block 'conteudo'%}
-{% include 'navbar.html'  %}
 
-<body class='bg-black text-gray-100 font-primary'>
+{% include 'navBar.html'  %}
 
+<body class='bg-black text-gray-100 font-primary body'>
 
-<main class='bg-primary_black min-h-screen w-full'>
-    <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex items-end bg-cover" style="background-image: url('{{ curso_destaque.thumb.url}}');">
-        <div>
-            <h3 class="text-6xl font-semibold text-white my-4">
+<main class='main_home_curso mx-auto mt-16 ' >
+    <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex items-end bg-contain md:bg-cover homecursos" style="background-image: url('{{ curso_destaque.thumb.url}}');">
+        <div class="mb-16 md:mb-2">
+            <h3 class="text-6xl font-semibold hc_titulo text-white ms:my-2 md:my-10">
                 {{ curso_destaque.titulo }}
             </h3>
-            <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
+            <p class=" w-11/12 md:w-5/12 font-medium text-white my-2 hc_sb_titulo">
                 {{ curso_destaque.descricao }}
             </p>
-            <div class="flex my-4">
+            <div class="flex my-1 mb">
                 <a href="{% url 'home:detalhescursos' curso_destaque.pk %}">
                     <button class="flex items-center bg-white py-2 px-5 rounded-md" style='color:black;'>
                         <ion-icon name="play" class="text-2xl"></ion-icon>
-                        <span class="ml-3 font-medium " >
+                        <span class="ml-2 font-medium " >
                             Play
                         </span>
                     </button>
@@ -108,21 +125,77 @@
             </div>
         </div>
     </section> 
+    {% comment %} -------------------------mobile -------------------------- {% endcomment %}
+<div class="flex flex-col px-6 pb-8 border-b border-gray-300 mx-auto lg:hidden bg-contain md:bg-cover">
+    <h3 class="text-center md:text-left text-xl font-bold mb-4">COMEÇE AQUI.</h3>
+    <ul class="flex flex-wrap md:flex-no-wrap px-2 text-xs font-bold">
+        {% for curso in request.user.cursos_vistos.all %}
+        <li class="text-center mx-3 mb-4 md:mb-0">
+            <a href="{% url 'home:detalhescursos' curso.pk %}">
+                <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="flex flex-col px-6 pb-8 border-b border-gray-300 mx-auto lg:hidden">
+    <h3 class="text-center md:text-left text-xl font-bold mb-4">CURSO EM ALTA</h3>
+    <ul class="flex flex-wrap md:flex-no-wrap px-2 text-xs font-bold">
+        {% for curso in lista_cursos_em_alta %}
+        <li class="text-center mx-3 mb-4 md:mb-0">
+            <a href="{% url 'home:detalhescursos' curso.pk %}">
+                <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="flex flex-col px-6 pb-8 border-b border-gray-300 mx-auto lg:hidden">
+    <h3 class="text-center md:text-left text-xl font-bold mb-4">FRONT-END</h3>
+    <ul class="flex flex-wrap md:flex-no-wrap px-2 text-xs font-bold">
+        {% for curso in front_end %}
+        <li class="text-center mx-3 mb-4 md:mb-0">
+            <a href="{% url 'home:detalhescursos' curso.pk %}">
+                <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="flex flex-col px-6 pb-8 border-b border-gray-300 mx-auto lg:hidden">
+    <h3 class="text-center md:text-left text-xl font-bold mb-4">CONTINUAR ASSISTINDO</h3>
+    <ul class="flex flex-wrap md:flex-no-wrap px-2 text-xs font-bold">
+        {% for curso in request.user.cursos_vistos.all %}
+        <li class="text-center mx-3 mb-4 md:mb-0">
+            <a href="{% url 'home:detalhescursos' curso.pk %}">
+                <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 
 
-    <section class='bg-primary_black flex justify-center py-10'>
-        <div class="p-8 w-10/12 relative" >
+{% comment %} -------------------------mobile -------------------------- {% endcomment %}
+
+{% comment %} -------------------------Desktop -------------------------- {% endcomment %}
+
+    <section class='bg-primary_black flex justify-center py-10 hidden lg:flex'>
+        <div class="p-8 w-10/12 relative " >
             <h2 class="text-gray-200 text-2xl font-medium">
                 Começe Aqui.
             </h2>
-            <div class="wrapper">
-            <section id="section1" class="flex flex-nowrap items-center justify-center space-x-8">
+            <div class="wrapper ">
+            <section id="section1" class="flex md:flex-nowrap items-center justify-center space-x-8">
                 <a href="#section2" class="arrow__btn text-6xl page">‹</a>
                 {% for curso in object_list %}
                 {% if forloop.counter < 5 %}
                 <div class="item h-64 w-1/4 m-4">
                     <a href="{% url 'home:detalhescursos' curso.pk %}">
-                        <img src="{{ curso.thumb.url }}" class="rounded-md w-full h-full object-cover">
+                        <img src="{{ curso.thumb.url }}" class=" rounded-md w-full h-full object-cover">
                     </a>
                 </div>
                 {% endif %}
@@ -148,7 +221,7 @@
         </div>
     </section>
 
-    <section class='bg-primary_black flex justify-center py-10'>
+    <section class='bg-primary_black flex justify-center py-10 hidden lg:flex'>
         <div class="p-8 w-10/12 relative" >
             <h2 class="text-gray-200 text-2xl font-medium">
                 Em Alta
@@ -186,7 +259,7 @@
         </div>
     </section>
     {% comment %}? FRONT-END {% endcomment %}
-    <section class='bg-primary_black flex justify-center py-10'>
+    <section class='bg-primary_black flex justify-center py-10 hidden lg:flex'>
         <div class="p-8 w-10/12 relative" >
             <h2 class="text-gray-200 text-2xl font-medium">
                 Front-end
@@ -226,7 +299,7 @@
     <section>
 
     </section>
-    <section class='bg-primary_black flex justify-center py-10'>
+    <section class='bg-primary_black flex justify-center py-10 hidden lg:flex'>
         <div class="p-8 w-10/12 relative" >
             <h2 class="text-gray-200 text-2xl font-medium">
                 Continuar Assistindo
@@ -263,7 +336,13 @@
             </div>
         </div>
     </section> 
-</main>
+
+<!--! FOOTER -->
+<footer class="p-4 bg-black rounded-lg  shadow md:px-6 md:py-8 dark:bg-gray-800 footer">
+    <span class="block text-sm text-center sm:text-center white:text-gray-400" style="color: white;">© 2022 <a href="#"
+            class="">Conexão Ficr™ </a>.Versão 2022.1 Beta.
+    </span>
+</footer>
 
 {% endblock %} 
 

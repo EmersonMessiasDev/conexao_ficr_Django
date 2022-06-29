@@ -5,10 +5,27 @@ Pesquisa de Cursos
 {% endblock %}
 
 {%block 'conteudo'%}
-{% include 'navbar.html'  %}
+{% include 'navBar.html'  %}
 
-<main class='bg-primary_black min-h-screen w-full'>
-    <section class='bg-primary_black  min-h-screen flex justify-center py-10'>
+<main class='main_home_curso mx-auto mt-16 '>
+    <div class="flex flex-col px-6 pb-8 border-b border-gray-300 mx-auto lg:hidden bg-contain md:bg-cover">
+        <h3 class="text-center md:text-left text-xl font-bold mb-4">Resultados da Busca</h3>
+        <ul class="flex flex-wrap md:flex-no-wrap px-2 text-xs font-bold">
+            {% for curso in object_list %}
+            <li class="text-center mx-3 mb-4 md:mb-0">
+                <a href="{% url 'home:detalhescursos' curso.pk %}">
+                    <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
+                </a>
+            </li>
+            {% endfor %}
+            {% if object_list|length == 0 %}
+            <h2 class="text-gray-200 text-2xl font-medium ">
+                Nenhum curso encontrado com base na pesquisa!
+            </h2>
+    {% endif %}
+        </ul>
+    </div>
+    <section class='bg-primary_black  min-h-screen flex justify-center py-10 hidden lg:flex'>
         <div class="p-8 w-10/12 relative" >
             <h2 class="text-gray-200 text-2xl font-medium">
                 Resultados da Busca
@@ -27,11 +44,14 @@ Pesquisa de Cursos
                             </h2>
                     {% endif %}
             </div>
-
-
         </div>
     </section>
+
+    <footer class="p-4 bg-black rounded-lg hidden shadow md:px-6 md:py-8 dark:bg-gray-800 footer">
+        <span class="block text-sm text-center sm:text-center white:text-gray-400" style="color: white;">© 2022 <a href="#"
+                class="">Conexão Ficr™ </a>.Versão 2022.1 Beta.
+        </span>
+    </footer>
 </main>
-
-
+<!--! FOOTER -->
 {% endblock %}

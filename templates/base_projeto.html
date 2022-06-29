@@ -1,5 +1,6 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,31 +13,12 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     {% block head %}
     {% endblock %}
 </head>
 <body class='bg-black text-gray-100 font-primary'>
     {%block 'conteudo'%}
-    {%endblock%}
-    <script>
-        const nav = document.querySelector('nav')
-
-        document.addEventListener("scroll",e=>{
-            
-            if(scrollY>100){
-                if(scrollY>window.innerHeight){
-                nav.classList.add('invisible')
-            }else{
-                nav.classList.add('bg-gray-900')
-                nav.classList.remove('invisible')
-            }
-            }else{
-                nav.classList.remove('bg-gray-900')
-                nav.classList.remove('invisible')
-            }
-        })
-
-    </script>
-    
+    {%endblock%}    
 </body>
 </html>
