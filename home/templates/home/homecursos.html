@@ -202,10 +202,10 @@
                 {% endfor %}
             <a href="#section2" class="arrow__btn text-6xl">›</a>
             </section>
-            {% if object_list|length > 4 %}
+            {% if comece_aqui|length > 4 %}
                 <section id="section2" class="flex flex-nowrap items-center justify-center">
                     <a href="#section1" class="arrow__btn text-6xl">‹</a>
-                {% for curso in object_list %}
+                {% for curso in comece_aqui %}
                 {% if forloop.counter > 4 %}
                 <div class="item h-64 w-1/4 m-4">
                     <a href="{% url 'home:detalhescursos' curso.pk %}">

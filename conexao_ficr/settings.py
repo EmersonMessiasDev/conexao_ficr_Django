@@ -77,6 +77,7 @@ TEMPLATES = [
                 'home.novos_context.lista_cursos_recentes',
                 'home.novos_context.lista_cursos_em_alta',
                 'home.novos_context.front_end',
+                'home.novos_context.comece_aqui'
             ],
         },
     },
