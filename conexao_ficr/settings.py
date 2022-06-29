@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+import django_on_heroku
 
 #
 
@@ -29,7 +30,7 @@ SECRET_KEY = 'django-insecure-400g4u7%#syoivnbtcdnm(-nv7a#om@%ytptwryl_-&ah$urt@
 DEBUG = True
 
 #testando ngrok
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok.io']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok.io','https://ficrconexao.herokuapp.com/ ']
 
 
 # Application definition
@@ -163,3 +164,4 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+django_on_heroku.settings(locals())
