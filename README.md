@@ -32,7 +32,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 
 
-## 💡 Como acessar o projeto
+## 💡 
 
 Esse projeto foi elaborado para vizualizar/interagir em desktop e mobile. Para acessar basta clicar no link que deixarei abaixo assim que fizer o deploy:
 
