@@ -34,7 +34,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 💡 
 
-Esse projeto foi elaborado para vizualizar/interagir em desktop e mobile. Para acessar basta clicar no link que deixarei abaixo assim que fizer o deploy:
+Esse projeto foi elaborado para vizualizar/interagir em desktop e mobile. Para acessar basta acessar o link:
 
 link: =>  https://ficrconexao.herokuapp.com/
 
