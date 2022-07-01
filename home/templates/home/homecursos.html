@@ -110,8 +110,11 @@
             <h3 class="text-6xl font-semibold hc_titulo text-white ms:my-2 md:my-10">
                 {{ curso_destaque.titulo }}
             </h3>
-            <p class=" w-11/12 md:w-5/12 font-medium text-white my-2 hc_sb_titulo">
-                {{ curso_destaque.descricao }}
+            <p class=" w-11/12 md:w-5/12 font-medium text-white my-2 hc_sb_titulo hidden lg:flex">
+                {{ curso_destaque.descricao|slice:":250"  }}...
+            </p>
+            <p class=" w-11/12 md:w-5/12 font-medium text-white my-2 hc_sb_titulo lg:hidden ">
+                {{ curso_destaque.descricao|slice:":50"  }}...
             </p>
             <div class="flex my-1 mb">
                 <a href="{% url 'home:detalhescursos' curso_destaque.pk %}">

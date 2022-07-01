@@ -29,7 +29,7 @@
 {% include 'navBar.html'  %}
 <main class='main_home_curso mx-auto mt-16' >
     
-<section class="h-screen relative mx-auto ms:py-2 bg-no-repeat pb-8 pl-6 flex items-end bg-contain md:bg-cover homecursos">
+<section class="lg:h-screen lg:relative lg:mx-auto  lg:bg-no-repeat lg:pb-8 lg:pl-6 lg:flex lg:items-end lg:bg-contain md:bg-cover lg:homecursos ms:aspect-w-16 ms:aspect-h-9">
     <iframe id="video" class="relative ml-2" width="100%" height="120%" src="{{ object.episodios.first.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
 </section> 
 
@@ -75,7 +75,7 @@
                 {% for episodio in object.episodios.all %}
             </h2>
                 <h3 class='text-lg'>
-                    <a href="{{ episodio.video }}">
+                    <a href="{% url 'home:detalhescursos' episodio.pk %}">
                         <p>Episódio {{ forloop.counter }}: {{ episodio.titulo}}</p>
                     </a>
                 </h3>

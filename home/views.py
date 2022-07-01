@@ -1,6 +1,7 @@
+from django.urls import reverse_lazy
 from .models import Curso, Usuario
 from .forms import CriarContaForm, FormHomepage
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import get_object_or_404, render, redirect, reverse
 from django.views.generic import TemplateView, ListView, DetailView, FormView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -72,9 +73,10 @@ class Paginaperfil(LoginRequiredMixin ,UpdateView):
     template_name = "home/editarperfil.html"
     model = Usuario
     fields = ['first_name','last_name', 'email']
-    
-    def get_sucess_url(self):
-        return reverse('home:homecursos')
+    success_url = reverse_lazy('home:homecursos')
+
+    # def get_sucess_url(self):
+    #     return reverse('home:homecursos')
     
 class Criarconta(FormView):
     template_name = "home/criarconta.html"
@@ -90,13 +92,4 @@ class Criarconta(FormView):
 
 
 
-# ? Função
-# def home(request):
-#     return render(request, "home/home.html")
 
-# Pagina de Cursos indicados
-# def homecursos(request):
-#     context = {}
-#     lista_curso = Curso.objects.all()
-#     context['lista_curso'] = lista_curso
-#     return render(request, "home/homecursos.html", context)
