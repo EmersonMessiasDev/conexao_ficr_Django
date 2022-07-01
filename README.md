@@ -16,10 +16,8 @@ Conexão para conectar pessoas e FIRC a abreviação da faculdade que curso. O i
 ## 🎨 Layout
 ### 🎨 Home-page
 
-![Home-Page](https://github.com/EmersonMessiasDev/conexao_ficr_Django/blob/main/Readme-Layouts/pagina_ficr.png)
+![Home-Page](https://github.com/EmersonMessiasDev/conexao_ficr_Django/blob/main/Readme-Layouts/apresentar.jpg)
 
-### 🎨 Pagina login/cadastro
-![Home-Page](https://github.com/EmersonMessiasDev/conexao_ficr_Django/blob/main/Readme-Layouts/Login_cadastro.jpg)
 
 ## 🛠 Tecnologias
 
