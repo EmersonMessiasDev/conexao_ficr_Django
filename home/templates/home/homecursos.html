@@ -104,14 +104,17 @@
 
 <body class='bg-black text-gray-100 font-primary body'>
 
-<main class='main_home_curso mx-auto mt-16 ' >
-    <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex items-end bg-contain md:bg-cover homecursos" style="background-image: url('{{ curso_destaque.thumb.url}}');">
+<main class='main_home_curso mx-auto mt-4 mb-10' >
+    <section class="h-screen relative bg-no-repeat pb-6 pl-6 flex items-end bg-contain md:bg-cover homecursos" style="background-image: url('{{ curso_destaque.thumb.url}}');">
         <div class="mb-16 md:mb-2">
             <h3 class="text-6xl font-semibold hc_titulo text-white ms:my-2 md:my-10">
                 {{ curso_destaque.titulo }}
             </h3>
-            <p class=" w-11/12 md:w-5/12 font-medium text-white my-2 hc_sb_titulo">
-                {{ curso_destaque.descricao }}
+            <p class=" w-11/12 md:w-5/12 font-medium text-white my-2 hc_sb_titulo hidden lg:flex">
+                {{ curso_destaque.descricao|slice:":250"  }}...
+            </p>
+            <p class=" w-11/12 md:w-5/12 font-medium text-white my-2 hc_sb_titulo lg:hidden ">
+                {{ curso_destaque.descricao|slice:":50"  }}...
             </p>
             <div class="flex my-1 mb">
                 <a href="{% url 'home:detalhescursos' curso_destaque.pk %}">
@@ -129,11 +132,13 @@
 <div class="flex flex-col px-6 pb-8 border-b border-gray-300 mx-auto lg:hidden bg-contain md:bg-cover">
     <h3 class="text-center md:text-left text-xl font-bold mb-4">COMEÇE AQUI.</h3>
     <ul class="flex flex-wrap md:flex-no-wrap px-2 text-xs font-bold">
-        {% for curso in request.user.cursos_vistos.all %}
+        {% for curso in comece_aqui %}
         <li class="text-center mx-3 mb-4 md:mb-0">
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
             </a>
+            <h3>{{ curso.titulo }}</h3>
+            <p>Visualização: {{ curso.visualizacao }}</p>
         </li>
         {% endfor %}
     </ul>
@@ -147,6 +152,8 @@
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
             </a>
+            <h3>{{ curso.titulo }}</h3>
+            <p>Visualização: {{ curso.visualizacao }}</p>
         </li>
         {% endfor %}
     </ul>
@@ -160,7 +167,10 @@
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
             </a>
+            <h3>{{ curso.titulo }}</h3>
+            <p>Visualização: {{ curso.visualizacao }}</p>
         </li>
+        
         {% endfor %}
     </ul>
 </div>
@@ -173,6 +183,8 @@
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
             </a>
+            <h3>{{ curso.titulo }}</h3>
+            <p>Visualização: {{ curso.visualizacao }}</p>
         </li>
         {% endfor %}
     </ul>
@@ -191,7 +203,7 @@
             <div class="wrapper ">
             <section id="section1" class="flex md:flex-nowrap items-center justify-center space-x-8">
                 <a href="#section2" class="arrow__btn text-6xl page">‹</a>
-                {% for curso in object_list %}
+                {% for curso in comece_aqui %}
                 {% if forloop.counter < 5 %}
                 <div class="item h-64 w-1/4 m-4">
                     <a href="{% url 'home:detalhescursos' curso.pk %}">
@@ -202,10 +214,10 @@
                 {% endfor %}
             <a href="#section2" class="arrow__btn text-6xl">›</a>
             </section>
-            {% if object_list|length > 4 %}
+            {% if comece_aqui|length > 4 %}
                 <section id="section2" class="flex flex-nowrap items-center justify-center">
                     <a href="#section1" class="arrow__btn text-6xl">‹</a>
-                {% for curso in object_list %}
+                {% for curso in comece_aqui %}
                 {% if forloop.counter > 4 %}
                 <div class="item h-64 w-1/4 m-4">
                     <a href="{% url 'home:detalhescursos' curso.pk %}">

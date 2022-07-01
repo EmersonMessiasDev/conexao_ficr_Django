@@ -1,1 +1,1 @@
-web: gunicorn  conexao_ficr.wsgi --log-file -
+web: gunicorn conexao_ficr.wsgi --log-file -

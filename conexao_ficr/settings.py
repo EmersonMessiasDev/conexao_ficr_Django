@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+import django_on_heroku
+# from decouple import config
+
+#
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,10 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-400g4u7%#syoivnbtcdnm(-nv7a#om@%ytptwryl_-&ah$urt@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True 
+# config('DEBUG', cast=bool, default =False)
 
 #testando ngrok
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok.io', 'conexaoicr.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok.io','https://ficrconexao.herokuapp.com/ ']
 
 
 # Application definition
@@ -46,6 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -71,6 +77,7 @@ TEMPLATES = [
                 'home.novos_context.lista_cursos_recentes',
                 'home.novos_context.lista_cursos_em_alta',
                 'home.novos_context.front_end',
+                'home.novos_context.comece_aqui'
             ],
         },
     },
@@ -149,4 +156,23 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK ='bootstrap5'
 
 
-# CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1','https://b204-2804-214-81e9-b8f3-46ce-41a9-dd3a-686c.ngrok.io']
+CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1','https://924d-2804-214-81e9-b8f3-9527-183-f3e9-a570.ngrok.io']
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+django_on_heroku.settings(locals())
+
+AWS_ACCESS_KEY_ID ='AKIAQVVXZ7ZWDOWDTP43'
+AWS_SECRET_ACCESS_KEY ='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'
+AWS_STORAGE_BUCKET_NAME = 'ficr-conexao'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

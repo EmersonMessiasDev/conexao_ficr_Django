@@ -29,8 +29,8 @@
 {% include 'navBar.html'  %}
 <main class='main_home_curso mx-auto mt-16' >
     
-<section class="h-screen relative ms:py-4 bg-no-repeat pb-8 pl-6 flex items-end bg-contain md:bg-cover homecursos">
-    <iframe id="video" width="100%" height="100%" src="{{ object.episodios.first.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+<section class="lg:h-screen lg:relative lg:mx-auto  lg:bg-no-repeat lg:pb-8 lg:pl-6 lg:flex lg:items-end lg:bg-contain md:bg-cover lg:homecursos ms:aspect-w-16 ms:aspect-h-9">
+    <iframe id="video" class="relative ml-2" width="100%" height="120%" src="{{ object.episodios.first.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
 </section> 
 
 <section class='bg-primary_black ml-6 mb-2 w-10/12 flex py-1'>
@@ -56,7 +56,7 @@
 </div>
 </section> 
 
-<section class='bg-primary_black flex  py-10 bg-contain md:bg-cover homecursos ml-6'>
+<div class="flex flex-col px-6 pb-8 border-b border-gray-300 mx-auto  bg-contain md:bg-cover">
     <div class="p-2 w-10/12 relative" >
         <h2 class="text-gray-200 text-3xl font-medium">
             Descrição:
@@ -75,7 +75,7 @@
                 {% for episodio in object.episodios.all %}
             </h2>
                 <h3 class='text-lg'>
-                    <a href="{{ episodio.video }}">
+                    <a href="{% url 'home:detalhescursos' episodio.pk %}">
                         <p>Episódio {{ forloop.counter }}: {{ episodio.titulo}}</p>
                     </a>
                 </h3>
@@ -93,6 +93,7 @@
             <a href="{% url 'home:detalhescursos' curso.pk %}">
                 <img src="{{ curso.thumb.url }}" alt="" class="rounded w-full md:w-75px mb-2 mx-auto">
             </a>
+            <h3>{{ curso.titulo }}</h3>
         </li>
         {% endfor %}
     </ul>
@@ -110,9 +111,12 @@
                 <a href="{% url 'home:detalhescursos' curso.pk %}">
                         <img src="{{ curso.thumb.url }}" class="object-cover w-full h-full " alt="">
                 </a>
+                <h3>{{ curso.titulo }}</h3>
                 </div>
             {% endfor %}
+            
         </div>
+        
     </div>
 </section>
 <!--! FOOTER -->
